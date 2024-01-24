@@ -1,12 +1,13 @@
 [tool.poetry]
-name = "even-odd"
-version = "0.2.4"
-description = ""
+name = "balaji-anomaly"
+version = "0.1.0"
+description = "anomaly UDF"
 authors = ["Numaflow developers"]
 
 [tool.poetry.dependencies]
 python = "~3.10"
-pynumaflow = "~0.6.0"
+#pynumaflow = "~0.6.0"
+pynumaflow = {git = "https://github.com/balajikrb/numaflow-python", rev = "main"}
 
 [tool.poetry.dev-dependencies]
 

@@ -10,12 +10,12 @@ def my_handler(keys: list[str], datum: Datum) -> Messages:
     messages = Messages()
     num = int.from_bytes(val, "little")
 
-    if num % 2 == 0:
-        output_keys = ["even"]
-        output_tags = ["even-tag"]
-    else:
-        output_keys = ["odd"]
-        output_tags = ["odd-tag"]
+    if num > 90:
+        output_keys = ["critical"]
+        output_tags = ["critical-tag"]
+    elif num > 70:
+        output_keys = ["major"]
+        output_tags = ["major-tag"]
 
     messages.append(Message(val, keys=output_keys, tags=output_tags))
     return messages
